@@ -12,3 +12,6 @@ Designed to charm, engage, and entertain, Neek is your go-to digital pet with a 
 - **Voice Interaction**: Speak directly to your gecko with ease through audio input.
 - **Mood Recognition**: This leopard gecko doesn't just read text; it reads the room. Watch as it adapts its responses to match your mood.
 - **Daily Gecko Thoughts**: Start your day with some wisdom straight from your reptile's mouth – expect quirky quotes and interesting thoughts to inspire and amuse.
+
+## SHOUTOUT
+
