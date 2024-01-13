@@ -1,8 +1,6 @@
 # SPEAKNEEK!
 
-Meet Neek, the sassiest gecko to access the web. An interactive chatbot experience
-inspired by a real-life leopard gecko with a personality larger than life itself.
-Designed to charm, engage, and entertain, Neek is your go-to digital pet with a twist. (And a love of snacks.)
+Meet Neek, the sassiest gecko to access the web (the first gecko to access the web...? Hmph!) SPEAKNEEK is an interactive chatbot experience inspired by a real-life leopard gecko with a personality larger than life itself. Designed to charm, engage, entertain and more, Neek is the go-to digital pet you never knew you needed in our life. Watch as your Neek bonds with you with each interaction, providing an experience that goes much deeper than it may seem on the surface. When you SPEAKNEEK, you find a special friend (even under all of that sass)
 
 ## FEATURES
 
