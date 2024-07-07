@@ -34,7 +34,7 @@ function App() {
 
     return (
         <div className="container p-5">
-            <h1>HEY! IT'S NEEK!</h1>
+            <h1>HEY! IT'S NEEEEEEEEEeK!</h1>
             <div id="chat-container" className='border rounded p-3 my-3' style={{height: '400px', overflowY: 'auto'}}>
                 {messages.map((message, index) => (
                     <Message key={index} text={message.text} isUser={message.isUser} />
