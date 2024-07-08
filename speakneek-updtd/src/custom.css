@@ -1,0 +1,45 @@
+:root {
+    --bs-primary: #f0e68c;
+    --bs-primary-rgb: 240, 230, 140;
+    --gecko-brown: #8b8155;
+    --gecko-green: #4b5d23;
+  }
+  
+  .btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: #d3c87c;
+    --bs-btn-hover-bg: #d3c87c;
+    --bs-btn-hover-border-color: #b6ab69;
+    --bs-btn-active-bg: #b6ab69;
+    --bs-btn-active-border-color: #999156;
+    --bs-btn-color: var(--gecko-brown);
+    --bs-btn-hover-color: var(--gecko-brown);
+  }
+  
+  .bg-gecko {
+    background-color: var(--bs-primary);
+  }
+  
+  .text-gecko {
+    color: var(--gecko-brown);
+  }
+  
+  .badge-gecko {
+    background-color: var(--gecko-green);
+    color: #F4F3F2;
+  }
+  
+  .card-gecko {
+    background-color: #FAFAD2; 
+    border-color: var(--gecko-brown);
+  }
+  
+  .typing-indicator {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
