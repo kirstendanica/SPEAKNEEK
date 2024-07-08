@@ -33,23 +33,27 @@ function App() {
     };
 
     return (
-        <div className="container p-5">
-            <h1>HEY! IT'S NEEEEEEEEEeK!</h1>
-            <div id="chat-container" className='border rounded p-3 my-3' style={{height: '400px', overflowY: 'auto'}}>
-                {messages.map((message, index) => (
-                    <Message key={index} text={message.text} isUser={message.isUser} />
-                ))}
-            </div>
-            <div id="chat-input" className='input-group'>
-                <input 
-                    type="text" 
-                    className='form-control' 
-                    placeholder="SPEAK TO NEEK?" 
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-                />
-                <button className="btn btn-primary" type="button" onClick={handleSend}>SEND</button>
+        <div className="container mt-5">
+            <h1 className="text-center mb-4">HEY! IT'S NEEEEEEEEEeK!</h1>
+            <div className="card">
+                <div className="card-body" style={{height: '400px', overflowY: 'auto'}}>
+                    {messages.map((message, index) => (
+                        <Message key={index} text={message.text} isUser={message.isUser} />
+                    ))}
+                </div>
+                <div className="card-footer">
+                    <div className="input-group">
+                        <input 
+                            type="text"
+                            className="form-control"
+                            placeholder="SPEAK TO NEEK?"
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+                        />
+                        <button className="btn btn-primary" type="button" onClick={handleSend}>SEND</button>
+                    </div>
+                </div>
             </div>
         </div>
     );
