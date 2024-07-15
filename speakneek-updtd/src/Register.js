@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Register() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("Stay tueeeeewwwned!");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Registration submitted:', { username, password });
-    // Send registration data to backend
+    console.log("Registration submitted:", { username, password });
   };
 
   return (
     <div className="container mt-5">
       <h2>Ready to adopt?</h2>
+      {error && <div className="alert alert-danger">{error}</div>}
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="username" className="form-label">USERNAME</label>
+          <label htmlFor="username" className="form-label">
+            USERNAME
+          </label>
           <input
             type="text"
             className="form-control"
@@ -26,7 +29,9 @@ function Register() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="password" className="form-label">PASSWORD</label>
+          <label htmlFor="password" className="form-label">
+            PASSWORD
+          </label>
           <input
             type="password"
             className="form-control"
@@ -36,7 +41,9 @@ function Register() {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">ADOPT</button>
+        <button type="submit" className="btn btn-primary">
+          ADOPT
+        </button>
       </form>
     </div>
   );
