@@ -12,12 +12,12 @@ function Register() {
     setError("");
     setSuccess("");
     try {
-      const response = await axios.post('http://localhost:5000/api/register', { username, password });
+      await axios.post('http://localhost:5000/api/register', { username, password });
       setSuccess("SUCCESSSSSSSSS!");
       setUsername("");
       setPassword("");
     } catch (error) {
-      setError(error.response?.data?.message || "Something failed... Please try again.");
+      setError(error.response?.data?.message || "Something... failed... Please try again!");
     }
   };
 
