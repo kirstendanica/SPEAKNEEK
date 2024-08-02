@@ -15,17 +15,34 @@ const User = mongoose.model('User', new mongoose.Schema({
     password: { type: String, required: true }
 }));
 
-mongoose.connect('mongodb://localhost/spekneek', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost/speakneek');
 
 const generateResponse = (message) => {
-    const keywords = ["crickets", "worms", "sleep", "hidey"];
-    let response = `AYEW! Did u just say...: "${message}"? ... go on, hewman?`;
-    keywords.forEach(keyword => {
-        if (message.toLowerCase().includes(keyword)) {
-            response = `Hmmmmmm, that sounds good, hewman. Great actually. I love ${keyword}!`;
+    const responses = {
+        crickets: ["Crickets are my faaaaaaavewrit snack hewman.", "Blah blah- oh! Yew say crickets? Yes...???! YUM!"],
+        worms: ["Worms? Crickets? How about ....... both?", "Worms. That is all, hewman.", "Did yew know, hewman, that the protein from mealwewrms = reptile sweet spot?",
+            "Worms, I hear? How about some nice juicy superworms, hewman?!!!1"
+        ],
+        sleep: ["I love my naps more than I love my cricke-hmm, no... That is not it...", "Crepuscular, hewman. Learn it. Do not disturb till dusk... deal?"],
+        hidey: ["Hide and seek? More like hide and NEEEEK!!", "I have the best hideyspot-good work, hewman.",
+            "Us gecks need our hideys to feel safe and sound; hidey = the getaway from heat, light or strange hewmans."
+        ],
+        default: [
+            "AYEW! Did u just say...? Go on, hewman?",
+            "Hmmm, that's interesting! Tell me more!",
+            "I'm not sure I understand, hewman... but I'm listening. I am..*snortle*",
+            "You hewmans say the scaliest things, dontcha?",
+            "I gotta say, hewman - I appreciate you and I'm proud of you - - - even though I may seem sassy and I AM a cold-blooded being, I meawn it. ☺"
+        ]
+    };
+
+    const lowercaseMessage = message.toLowerCase();
+    for (const [keyword, replies] of Object.entries(responses)) {
+        if (lowercaseMessage.includes(keyword)) {
+            return replies[Math.floor(Math.random() * replies.length)];
         }
-    });
-    return response;
+    }
+    return responses.default[Math.floor(Math.random() * responses.default.length)];
 };
 
 // Chat route
